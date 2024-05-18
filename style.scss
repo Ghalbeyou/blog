@@ -15,18 +15,25 @@
 
 html {
   font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
+  background: $white;
+  font: 18px/1.6 $helvetica;
   color: $darkGray;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
+  max-width: 800px;
+  padding: 0 20px;
   width: 100%;
 }
 
@@ -34,52 +41,52 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
   color: $darkerGray;
   font-weight: bold;
-
-  line-height: 1.7;
-  margin: 1em 0 15px;
+  line-height: 1.5;
+  margin: 1.5em 0 1em;
   padding: 0;
+  text-transform: capitalize;
 
   @include mobile {
-    line-height: 1.4;
+    line-height: 1.3;
   }
 }
 
 h1 {
-  font-size: 30px;
-  a {
-    color: inherit;
-  }
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1.75rem;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 1.5rem;
   color: $gray;
 }
 
 p {
-  margin: 15px 0;
+  margin: 1em 0;
+  line-height: 1.8;
 }
 
 a {
   color: $blue;
   text-decoration: none;
-	cursor: pointer;
+  cursor: pointer;
+  transition: color 0.3s;
+
   &:hover, &:active {
-    color: $blue;
+    color: darken($blue, 10%);
   }
 }
 
 ul, ol {
-  margin: 15px 0;
-  padding-left: 30px;
+  margin: 1em 0;
+  padding-left: 1.5em;
 }
 
 ul {
@@ -108,6 +115,8 @@ strong, b {
 
 img {
   max-width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -125,6 +134,7 @@ img {
   color: $black;
   background: $lightGray;
 }
+
 ::selection {
   color: $black;
   background: $lightGray;
@@ -132,14 +142,14 @@ img {
 
 // Nicolas Gallagher's micro clearfix hack
 // http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
 }
 
-.clearfix:after {
-    clear: both;
+.clearfix::after {
+  clear: both;
 }
 
 /*********************/
@@ -151,11 +161,11 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 3em;
 }
 
 .masthead {
-  padding: 20px 0;
+  padding: 1.5em 0;
   border-bottom: 1px solid $lightGray;
 
   @include mobile {
@@ -165,18 +175,19 @@ img {
 
 .site-avatar {
   float: left;
-  width: 70px;
-  height: 70px;
-  margin-right: 15px;
+  width: 80px;
+  height: 80px;
+  margin-right: 1em;
+  border-radius: 50%;
 
   @include mobile {
     float: none;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 1em;
   }
 
   img {
-    border-radius: 5px;
+    border-radius: 50%;
   }
 }
 
@@ -186,7 +197,7 @@ img {
   @include mobile {
     float: none;
     display: block;
-    margin: 0 auto;
+    text-align: center;
   }
 }
 
@@ -196,42 +207,42 @@ img {
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
-  font-size: 28px;
-  letter-spacing: 1px;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
 }
 
 .site-description {
-  margin: -5px 0 0 0;
+  margin: 0.2em 0 0;
   color: $gray;
-  font-size: 16px;
+  font-size: 1rem;
 
   @include mobile {
-    margin: 3px 0;
+    margin: 0.5em 0 0;
   }
 }
 
 nav {
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  margin-top: 1.5em;
   font-family: $helveticaNeue;
-  font-size: 18px;
+  font-size: 1rem;
 
   @include mobile {
     float: none;
-    margin-top: 9px;
+    margin-top: 1em;
     display: block;
-    font-size: 16px;
+    text-align: center;
   }
 
   a {
-    margin-left: 20px;
+    margin-left: 1.5em;
     color: $darkGray;
     text-align: right;
     font-weight: 300;
-    letter-spacing: 1px;
+    letter-spacing: 0.05em;
 
     @include mobile {
-      margin: 0 10px;
+      margin: 0 1em;
       color: $blue;
     }
   }
@@ -253,34 +264,47 @@ nav {
 
 .post {
   blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
+    margin: 1.5em 1em;
+    border-left: 4px solid $gray;
+    padding: 0.5em 1em;
     color: $gray;
-    font-size: 22px;
+    font-size: 1.25rem;
     font-style: italic;
+    background: lighten($lightGray, 10%);
   }
 
   .comments {
-    margin-top: 10px;
+    margin-top: 1em;
   }
 
   .read-more {
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: $blue;
+    display: inline-block;
+    margin-top: 1em;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: darken($blue, 10%);
+    }
   }
 }
 
 .wrapper-footer {
-  margin-top: 50px;
+  margin-top: 3em;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: $lightGray;
 }
 
 footer {
-  padding: 20px 0;
+  padding: 1.5em 0;
   text-align: center;
+  font-size: 0.875rem;
+  color: $gray;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
