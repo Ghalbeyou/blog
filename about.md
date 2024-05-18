@@ -4,11 +4,11 @@ title: About
 permalink: /about/
 ---
 
-Hello and welcome to my blog! I'm [Your Name], a passionate web developer with a keen interest in artificial intelligence, technology, and innovative projects. Through this blog, I aim to share my knowledge, experiences, and insights with a community of like-minded individuals.
+Hello and welcome to my blog! I'm Arash Amini, a passionate web developer with a keen interest in artificial intelligence, technology, and innovative projects. Through this blog, I aim to share my knowledge, experiences, and insights with a community of like-minded individuals.
 
 ## Who Am I?
 
-I am a web developer with [X years] of experience in creating dynamic and responsive websites and applications. My journey in the tech world began with a curiosity for how things work and evolved into a deep passion for coding and problem-solving. Over the years, I have honed my skills in various programming languages and frameworks, allowing me to build robust and scalable solutions.
+I am a web developer with 6 years of experience in creating dynamic and responsive websites and applications. My journey in the tech world began with a curiosity for how things work and evolved into a deep passion for coding and problem-solving. Over the years, I have honed my skills in various programming languages and frameworks, allowing me to build robust and scalable solutions.
 
 ## My Interests
 
@@ -30,7 +30,7 @@ This blog is a blend of technical tutorials, project showcases, and discussions 
 
 I believe in the power of community and collaboration. I encourage you to engage with the content, leave comments, and share your thoughts. Let's learn and grow together!
 
-Feel free to reach out to me via the contact form or connect with me on [social media links] for any questions, suggestions, or collaboration ideas.
+Feel free to reach out to me via the contact form or connect with me on Github for any questions, suggestions, or collaboration ideas.
 
 ## Thank You!
 
