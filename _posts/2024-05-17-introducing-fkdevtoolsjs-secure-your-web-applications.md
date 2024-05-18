@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Don't Use Coding Assistances a Lot!
+title: Introducing F**kDevTools.js: Secure Your Web Applications
 ---
 
 
