@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introducing F--kDevTools.js: Secure Your Web Applications
+title: Introducing F--kDevTools.js Secure Your Web Applications
 ---
 
 
